@@ -1,23 +1,25 @@
 {
     "name": "Demo extension",
     "version": "0.0.1",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "description" : "This is demo extension",
 
     "browser_action": {
         "default_icon": {
-            "19": "logo/logo1.png"
+            "16": "assets/icons/logo16.png",
+            "48": "assets/icons/logo48.png",
+            "128": "assets/icons/logo128.png"
         },
         "default_title": "Demo Extension",
         "default_popup": "popup/index.html"
     },
 
     "background": {
-        "scripts": ["./background.js"]
+        "scripts": ["./background/background.js"]
     },
 
     "content_scripts": [{
-        "js": ["content-scripts/main.js"],
+        "js": ["./content-scripts/main.js"],
         "matches": ["https://viblo.asia/*"]
     }]
 }

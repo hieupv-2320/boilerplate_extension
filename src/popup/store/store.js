@@ -5,7 +5,6 @@ import actions from './actions'
 import getter from './getter'
 
 Vue.use(Vuex)
-const LOCAL_STORAGE_KEY = 'todo-app'
 
 export default new Vuex.Store({
   state: {  
