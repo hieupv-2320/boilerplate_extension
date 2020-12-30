@@ -1,4 +1,4 @@
-# boilerplate-extension
+# Boilerplate-extension
 
 In this boilerplate has already features: 
 - Countdown.
@@ -24,19 +24,40 @@ Requirement:
 - Yarn ^1.22.5
 
 
-Use: 
-## Setup
+### Use: 
+
+First, we need to clone this boilder-plate by link:
+
+https://github.com/hieupv-2320/boilerplate_extension.git
+
+
+#### Setup:
 ```
 yarn install
 ```
 
-### Build extension to load unpacked
+##### Build extension:
 ```
 yarn build
 ```
 
-### Lints and fixes files
+##### Lints and fixes files:
 ```
 yarn lint
 ```
 
+##### Setup to Chrome: 
+ After install and build this boilerplate we need: 
+- Go to chrome://extensions/ and turn on ```developer mode``` at top-right screen.
+- Click Load Unpacked button at top-left screen and choose the ```boilerplate-extension/dist``` folder, then click open and loading this boilerplate
+
+
+### Features:
+- Coundown: This feature make we can follow the time. We need to set the target time at input field, Click to ```Set``` button and extension will countdown for you.
+- Viblo darkmode:  This feature will change viblo blog to darkmode. When you being in https://viblo.asia/.  Click to ```Config``` tab and Change Viblo  Dark Mode to ```yes```.   Viblo Page will change to dark theme.
+
+### Final 
+
+Hope you contribute and give us feedback to improve this boilerplate.
+
+Many thanks !
