@@ -39,11 +39,12 @@ export default {
     methods: {
         changeMode(value) {
             this.darkMode = value;
-            this.writeInConsole(value);
+            this.sendToBrowser(value);
 
         },
-        writeInConsole(value) {
+        sendToBrowser(value) {
             localStorage.viblo_dark_mode = value;
+
             browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
                 browser.tabs
                 .sendMessage(tabs[0].id, { msg: { action: "print_in_console" }, value: value });

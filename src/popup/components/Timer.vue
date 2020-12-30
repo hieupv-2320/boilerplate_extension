@@ -50,9 +50,6 @@
         <div class="clock" v-if="!show">
             First set your time! 
         </div>
-        <el-row>
-            @phamviethieu - Sun Asterisk Viet Nam
-        </el-row>
     </div>
 </template>
 
@@ -98,7 +95,7 @@ export default {
         },
     mounted(){
         this.start = new Date().getTime();
-        console.log(new Date(this.endtime).getTime());
+
         if(localStorage.end) {
             this.end = new Date(localStorage.end).getTime();
             this.show = true;
@@ -106,7 +103,6 @@ export default {
         } else {
             this.show = false;
         }
-        // this.end = new Date(this.endtime).getTime();
 
         this.timerCount(this.start,this.end);
         this.interval = setInterval(() => {
@@ -117,7 +113,6 @@ export default {
         timerCount: function(start,end){
             // Get todays date and time
             var now = new Date().getTime();
-
             // Find the distance between now an the count down date
             var distance = start - now;
             var passTime =  end - now;
